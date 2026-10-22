@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
   :root {
     --charcoal: #1a1a1a;
     --forge: #2d2826;
@@ -105,14 +105,17 @@
     padding: 120px 0 100px;
     border-bottom: 1px solid rgba(201, 184, 150, 0.12);
   }
-  .hero h1 {
-    font-size: clamp(44px, 7vw, 88px);
-    font-weight: 500;
-    max-width: 14ch;
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(36px, 5vw, 68px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
     margin-bottom: 32px;
   }
   .hero h1 em {
-    font-style: italic;
+    font-style: normal;
     color: var(--bronze);
   }
   .hero p {
