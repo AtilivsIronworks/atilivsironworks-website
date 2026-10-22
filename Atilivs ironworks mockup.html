@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atilivs Ironworks | Hand-Forged Historical Blades and Metalwork</title>
+<meta name="description" content="Hand-forged historical knives, seaxes, fittings, and metalwork by Corey Peterson. Roman, Anglo-Scandinavian, Norse, and medieval influences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #1a1a1a;
+    --forge: #2d2826;
+    --oxide: #8b3a2f;
+    --bronze: #c9b896;
+    --linen: #f0ebe2;
+    --linen-dim: rgba(240, 235, 226, 0.72);
+    --max-w: 1180px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    background: var(--charcoal);
+    color: var(--linen);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--linen);
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Tang-stamp label: the signature element ---------- */
+  .stamp {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    border: 1px solid rgba(201, 184, 150, 0.35);
+    padding: 7px 14px 6px 16px;
+    margin-bottom: 28px;
+  }
+
+  /* ---------- Nav ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(26, 26, 26, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201, 184, 150, 0.15);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--linen);
+  }
+  .brand span { color: var(--oxide); }
+  nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  nav a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--linen-dim);
+    transition: color 0.2s ease;
+  }
+  nav a:hover, nav a:focus-visible { color: var(--bronze); }
+  nav a:focus-visible { outline: 1px solid var(--bronze); outline-offset: 4px; }
+  .nav-toggle { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 120px 0 100px;
+    border-bottom: 1px solid rgba(201, 184, 150, 0.12);
+  }
+  .hero h1 {
+    font-size: clamp(44px, 7vw, 88px);
+    font-weight: 500;
+    max-width: 14ch;
+    margin-bottom: 32px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--bronze);
+  }
+  .hero p {
+    max-width: 54ch;
+    font-size: 19px;
+    color: var(--linen-dim);
+    margin-bottom: 44px;
+  }
+  .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 16px 30px;
+    border: 1px solid var(--oxide);
+    color: var(--linen);
+    background: var(--oxide);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover, .btn:focus-visible { background: transparent; color: var(--bronze); border-color: var(--bronze); }
+  .btn.ghost { background: transparent; border-color: rgba(201, 184, 150, 0.4); color: var(--linen-dim); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { border-color: var(--bronze); color: var(--bronze); }
+  .btn:focus-visible { outline: 1px solid var(--bronze); outline-offset: 4px; }
+
+  .hero-photo {
+    margin-top: 80px;
+    aspect-ratio: 21 / 9;
+    background: var(--forge);
+    border: 1px solid rgba(201, 184, 150, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-note {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(201, 184, 150, 0.5);
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section { padding: 100px 0; }
+  .section-head { margin-bottom: 64px; }
+  .section-head h2 {
+    font-size: clamp(34px, 4.5vw, 52px);
+    font-weight: 500;
+    max-width: 20ch;
+  }
+  .section-head p {
+    margin-top: 18px;
+    max-width: 60ch;
+    color: var(--linen-dim);
+  }
+  .alt { background: var(--forge); }
+
+  /* ---------- Works grid ---------- */
+  .works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px 40px;
+  }
+  .piece { display: flex; flex-direction: column; }
+  .piece-photo {
+    aspect-ratio: 4 / 3;
+    background: var(--charcoal);
+    border: 1px solid rgba(201, 184, 150, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .alt .piece-photo { background: #221e1c; }
+  .piece h3 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .piece-meta {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--oxide);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .piece p {
+    font-size: 15.5px;
+    color: var(--linen-dim);
+  }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .about-photo {
+    aspect-ratio: 3 / 4;
+    background: var(--forge);
+    border: 1px solid rgba(201, 184, 150, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 110px;
+  }
+  .about-copy p { margin-bottom: 22px; color: var(--linen-dim); }
+  .about-copy p:first-of-type {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.4;
+    color: var(--linen);
+  }
+
+  /* ---------- Articles ---------- */
+  .articles-empty {
+    border: 1px solid rgba(201, 184, 150, 0.25);
+    padding: 72px 40px;
+    text-align: center;
+  }
+  .articles-empty h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .articles-empty p {
+    color: var(--linen-dim);
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+
+  /* ---------- Contact / footer ---------- */
+  footer {
+    background: var(--forge);
+    border-top: 1px solid rgba(201, 184, 150, 0.15);
+    padding: 90px 0 50px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+  }
+  .contact-grid h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .contact-grid p { color: var(--linen-dim); max-width: 46ch; margin-bottom: 30px; }
+  .contact-links { list-style: none; }
+  .contact-links li {
+    border-bottom: 1px solid rgba(201, 184, 150, 0.18);
+    padding: 18px 0;
+  }
+  .contact-links a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: var(--linen);
+    font-size: 17px;
+    transition: color 0.2s ease;
+  }
+  .contact-links a:hover, .contact-links a:focus-visible { color: var(--bronze); }
+  .contact-links span {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--oxide);
+  }
+  .colophon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(201, 184, 150, 0.15);
+    font-size: 13px;
+    color: rgba(240, 235, 226, 0.45);
+  }
+  .colophon .latin {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--bronze);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 880px) {
+    section { padding: 72px 0; }
+    .hero { padding: 80px 0 64px; }
+    .works-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo { position: static; aspect-ratio: 4 / 3; }
+    .contact-grid { grid-template-columns: 1fr; }
+    nav ul { gap: 18px; flex-wrap: wrap; }
+    .nav { flex-direction: column; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">ATILIVS <span>IRONWORKS</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://www.drifasleap.com/shop/Atilivs-Ironworks" target="_blank" rel="noopener">Shop</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="stamp">Hand-Forged in Vernal, Utah</span>
+      <h1>Historical blades, <em>forged by hand</em>, grounded in evidence.</h1>
+      <p>I make knives, seaxes, swords, and fittings drawn from Roman, Anglo-Scandinavian, Norse, and medieval traditions. Every piece starts with the archaeology: real finds, real measurements, real construction methods. Then it goes into the fire.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#works">View the Works</a>
+        <a class="btn ghost" href="https://www.drifasleap.com/shop/Atilivs-Ironworks" target="_blank" rel="noopener">Available Pieces</a>
+      </div>
+      <div class="hero-photo">
+        <span class="placeholder-note">Hero photo slot: one strong forging shot or lead piece</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKS ================= -->
+  <section id="works" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="stamp">Selected Works</span>
+        <h2>Pieces built from the record</h2>
+        <p>A selection of finished work. Each entry names its sources, its materials, and its construction. Where a piece departs from the historical record, the description says so.</p>
+      </div>
+
+      <div class="works-grid">
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: full piece, slight angle</span></div>
+          <h3>Anglo-Saxon Broken Back Seax</h3>
+          <div class="piece-meta">Coppergate, York · Multi-bar pattern weld</div>
+          <p>Wrought iron spine, two alternating twisted bars of 1075 and 15N20, and a wrought iron and 1080 edge bar joined with a wolf-tooth weld. Sheath design follows leatherwork recovered in the Coppergate excavations.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: inscription detail</span></div>
+          <h3>River Witham +LEUTRIT Sword</h3>
+          <div class="piece-meta">Queen's Prize Entry · Forge-welded inscription</div>
+          <p>Based on the River Witham find and its inlaid inscription. Blade forged from 1075, with +LEUTRIT forge-welded into the steel in 1075 and 15N20. Guard and pommel in wrought iron with copper and brass inlay. All materials modern, stated plainly.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: herringbone pattern detail</span></div>
+          <h3>Roman Pugio, Type II</h3>
+          <div class="piece-meta">Rhine Frontier Finds · Double herringbone twist</div>
+          <p>Pattern-welded center of 1075 and wrought iron in a double herringbone twist. Brass plate handle with handmade painted rivets. Research drawn from Saliola and Casprini, Pugio: Gladius Brevis Est.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: full sword with scabbard</span></div>
+          <h3>Viking Age Sword, Type K</h3>
+          <div class="piece-meta">Knighting Sword · 125-layer billet</div>
+          <p>Forged from a 125-layer random pattern-welded billet of 80CrV2 and 15N20 for the knighting of Sir Thorhall. Proportions follow surviving Type K examples from the period.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: blade with heraldry</span></div>
+          <h3>Sword of State, Barony of Loch Solann</h3>
+          <div class="piece-meta">Irish Ring Sword Form · Ceremonial</div>
+          <p>Built and donated to serve as the barony's Sword of State, following the general form of Irish ring swords. Hand forged throughout; the baronial heraldry on the blade was added by laser and electro-etching, and the description says so.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: full piece</span></div>
+          <h3>Roman Gladius</h3>
+          <div class="piece-meta">After Christian Miks · Reworked and corrected</div>
+          <p>Dimensions drawn from Miks, Studien zur römischen Schwertbewaffnung in der Kaiserzeit. After donation I found a section near the lower guard left unbeveled, a detail the record didn't support. I asked for the sword back and corrected it. The standard matters more than the schedule.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: blade profile, spine visible</span></div>
+          <h3>Coppergate Knife 2756</h3>
+          <div class="piece-meta">York, c. 850–900 AD · Catalogued reconstruction</div>
+          <p>Reconstruction of catalogue number 2756 from the 16-22 Coppergate site. Blade 153mm, tang 150mm, spine 6mm, angle-back A1 profile. Wrought iron spine butt-welded to a 1084 edge, 60 HRC. Walnut handle with a 1mm brass pommel plate.</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece-photo"><span class="placeholder-note">Photo: knife in hand for scale</span></div>
+          <h3>Roman Everyday Carry Knife</h3>
+          <div class="piece-meta">Utility Form · Cow femur handle</div>
+          <p>A small utility blade of the kind most Romans actually carried. Bone handles like this one turn up across the archaeological record. Most historical knives were working tools, and this one is built to be used.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-photo">
+          <span class="placeholder-note">Photo: you at the forge or portrait with work</span>
+        </div>
+        <div class="about-copy">
+          <span class="stamp">The Smith</span>
+          <p>I'm Corey Peterson. I forge historical blades by hand in Vernal, Utah, under the name Atilivs Ironworks.</p>
+          <p>The work centers on pattern-welded seaxes and Anglo-Saxon knives, with Roman, Norse, and medieval pieces alongside. I started with rebar in a charcoal forge fed by a blow dryer. The tools got better. The standard stayed the same: study the find, name the sources, and be honest about what's documented and what's a modern choice.</p>
+          <p>In the Society for Creative Anachronism I'm known as Atilivs Primvs Castvs. The blades I build serve in tournaments, ceremonies, and on the belts of people who use them.</p>
+          <p>If you want a piece with real history behind it, look through the works and get in touch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARTICLES ================= -->
+  <section id="articles" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="stamp">Research</span>
+        <h2>Articles</h2>
+      </div>
+      <div class="articles-empty">
+        <h3>First article arrives June 2026</h3>
+        <p>Research-driven writing on historical blade construction. Sourced from archaeological reports, museum publications, and named scholars. Every claim traced to evidence, with the bibliography at the bottom.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= CONTACT / FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="stamp">Contact</span>
+        <h2>Commissions and questions</h2>
+        <p>Commission inquiries, questions about a piece, or research conversations are all welcome. Tell me what you're after and I'll tell you honestly whether I'm the right smith for it.</p>
+        <a class="btn" href="mailto:hello@atilivsironworks.com">Send an Email</a>
+      </div>
+      <div>
+        <ul class="contact-links">
+          <li><a href="https://www.drifasleap.com/shop/Atilivs-Ironworks" target="_blank" rel="noopener">Drifa's Leap <span>Available Work</span></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram <span>@atilivsironworks</span></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook <span>Atilivs Ironworks</span></a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok <span>Process Videos</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <div>© 2026 Atilivs Ironworks. Hand-forged in Vernal, Utah.</div>
+      <div class="latin">Ars longa, vita brevis.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
