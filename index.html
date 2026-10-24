@@ -19,18 +19,35 @@
  .hero .hero-photo::after { background: linear-gradient(0deg, #1a1a1a 0%, transparent 27%), linear-gradient(90deg, rgba(26,26,26,.15), transparent 50%); }
 }
 
-/* Compact, uniform featured-project cards on the homepage only. */
+/* Featured project images: equal visual height, no cropping or oversized frames. */
 .home-featured .works-grid { max-width: 820px; margin-inline: auto; gap: 34px 30px; }
-.home-featured .piece-photo { height: 210px; aspect-ratio: auto; overflow: hidden; margin-bottom: 16px; padding: 10px; background: #221e1c; }
-.home-featured .works-grid .piece-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+.home-featured .piece-photo {
+  height: 260px;
+  aspect-ratio: auto;
+  overflow: visible;
+  margin-bottom: 16px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+.home-featured .works-grid .piece-photo img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #221e1c;
+  border: 1px solid rgba(201, 184, 150, 0.18);
+}
 .home-featured .piece h3 { font-size: 25px; }
 @media (max-width: 880px) and (min-width: 601px) {
   .home-featured .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .home-featured .piece-photo { height: 205px; }
+  .home-featured .piece-photo { height: 245px; }
 }
 @media (max-width: 600px) {
   .home-featured .works-grid { max-width: 430px; gap: 32px; }
-  .home-featured .piece-photo { height: 205px; }
+  .home-featured .piece-photo { height: 235px; }
 }
 </style><style>.works-grid .piece-photo img{display:block;width:100%;height:100%;object-fit:cover}</style></head><body><header><div class="nav"><a class="brand" href="/">ATILIVS <span>IRONWORKS</span></a><nav aria-label="Main"><ul><li><a href="/works/">Works</a></li><li><a href="/research/">Research</a></li><li><a href="/articles/">Articles</a></li><li><a href="/about/">About</a></li><li><a href="https://leaphandmade.com/shop/Atilivs-Ironworks" rel="noopener" target="_blank">Shop</a></li><li><a href="/contact/">Contact</a></li></ul></nav></div></header><main><section class="hero">
 <div class="wrap">
