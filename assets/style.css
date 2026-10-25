@@ -330,3 +330,16 @@
 .facts--standard .fact-group{padding:18px 0}
 .facts--standard .fact-group strong{display:block;margin-bottom:8px}
 .facts--standard .fact-group p{font-size:14px;line-height:1.7;color:var(--linen-dim);margin:0;overflow-wrap:break-word}
+
+
+/* Shared hierarchy for the hybrid Works project narrative */
+.prose h3, .loch-story h3{
+  font-size:clamp(24px,2.6vw,30px);
+  font-weight:600;
+  line-height:1.25;
+  margin:33px 0 15px;
+}
+.prose h2[id], .prose h3[id],
+.loch-story h2[id], .loch-story h3[id]{
+  scroll-margin-top:112px;
+}
