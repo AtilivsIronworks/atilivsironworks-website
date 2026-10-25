@@ -1,4 +1,4 @@
-# Atilivs Ironworks website — Phase 2
+# Atilivs Ironworks website: Phase 2
 
 Static HTML/CSS website for Cloudflare Pages. No build step required.
 
