@@ -63,7 +63,19 @@ jobs:
           git add research/vlfberht-swords/vlfberht-swords.pdf
           if ! git diff --cached --quiet; then
             git commit -m "Build downloadable illustrated VLFBERHT research paper PDF"
-            git push
+            # Concurrent article edits can advance main while the PDF is rendering.
+            # Rebase this generated-file commit on the current head before pushing.
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Push conflicted with another update; retry $attempt/5"
+              sleep 2
+            done
+            echo "Could not publish PDF after five attempts" >&2
+            exit 1
           else
             echo "PDF is unchanged."
           fi
