@@ -1,20 +1,15 @@
-# VLFBERHT Swords — publication staging
+# VLFBERHT Swords — published research paper
 
-This directory reserves the Research article URL:
+**Published:** October 28, 2026  
+**Article:** https://atilivsironworks.com/research/vlfberht-swords/  
+**Canonical source:** `research/vlfberht-swords/index.html` on `main`
 
-`/research/vlfberht-swords/`
+Full title: **VLFBERHT Swords: What Do We Actually Know About How They Were Made?**
 
-**Status: not published.** The article's `index.html` will be added here only after the approved manuscript, figures, image credits, and links have been checked. The Research archive currently displays an unlinked "in preparation" notice.
+The article contains the author's approved introduction, Sections 1–7, conclusion, references, seven illustrated figures and credits, and a research/editorial note describing AI assistance. The paper carefully distinguishes metallurgical evidence from researchers' interpretations and the modern bladesmithing experiment.
 
-Working title: **VLFBERHT Swords: What Do We Actually Know About How They Were Made?**
+The six uploaded article photographs and the article's `index.html` are all in **`research/vlfberht-swords/`**. Their image URLs are relative, so they must stay in this directory unless the HTML is updated. The seventh image is reused from `/assets/river-witham/inscription-and-guard.jpg`.
 
-The approved introduction contrasts the popular "magical" reputation with the author's actual interest in varied blade construction and inscriptions. Preserve the author's approved wording, the conclusion's uncertainty, and the distinction between documented evidence and hypotheses.
+For image credits, license details, and exact filenames, see [the image map](../../assets/research/vlfberht-swords/README.md). For site routes and future maintenance, see [the publication map](../../docs/research-vlfberht-publication-map.md).
 
-Before publication:
-1. Verify and add photographs using `/assets/research/vlfberht-swords/`.
-2. Add diagrams drawn for this article and full image credits.
-3. Assemble the complete article and references into `index.html` with the shared site design.
-4. Include the actual publication date (not a project completion date).
-5. Update `research/index.html` to a linked published entry, and **then** add `/research/vlfberht-swords/` to `sitemap.xml`.
-
-See [image manifest](../../assets/research/vlfberht-swords/README.md) and [publication map](../../docs/research-vlfberht-publication-map.md).
+**Further improvements:** An original blade-construction diagram can be added later, with new captions as appropriate. Photographs or figures from academic publications (including Košta et al., Moilanen, and Petri) have **not** been reused because figure-specific rights have not been cleared.
