@@ -375,9 +375,14 @@
   color:var(--linen-dim);
 }
 .publication-meta-item svg,.publication-meta-pdf svg{
-  width:17px;
-  height:17px;
-  flex:0 0 17px;
+  display:inline-block;
+  width:16px;
+  height:16px;
+  min-width:16px;
+  max-width:16px;
+  max-height:16px;
+  flex:0 0 16px;
+  vertical-align:middle;
   color:var(--bronze);
 }
 .publication-meta-item a{
