@@ -30,3 +30,10 @@ Introduction (final approved opening with the popular magical-steel reputation a
 ## Future edits
 
 Keep the article title, publication date, canonical link, image paths, sitemap URL and Research archive entry synchronized. The figure 5 image must be uploaded to the article directory under the expected filename. If adding an original steel-construction diagram later, provide accurate material/technique labels and a caption. Preserve full photographer credits and license links with third-party photographs.
+
+## PDF export
+
+- `research/vlfberht-swords/vlfberht-swords.pdf`: complete research paper with figures, measurements table, references and editorial note.
+- `scripts/build_vlfberht_pdf.py`: reproducible exporter. The website HTML is authoritative.
+- `.github/workflows/build-vlfberht-pdf.yml`: rebuilds, verifies and commits the downloadable PDF when source HTML or figures change.
+- The bottom of the live article contains the PDF download link, followed by the existing support section.
