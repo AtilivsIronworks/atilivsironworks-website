@@ -77,6 +77,9 @@ def main() -> None:
     title = heading.get_text(" ", strip=True)
     subtitle_tag = intro.select_one("h1 + p")
     date_tag = intro.select_one(".publication-meta-item time")
+    author_tag = intro.select_one('a[rel="author"]')
+    if author_tag is None:
+        raise SystemExit("Publication author missing from canonical article")
 
     # A research-paper export includes all approved scholarship, captions, tables,
     # references and editorial note; it omits website navigation/donation controls.
@@ -113,13 +116,14 @@ def main() -> None:
 
     subtitle = subtitle_tag.get_text(" ", strip=True) if subtitle_tag else ""
     date = date_tag.get_text(" ", strip=True) if date_tag else ""
+    author = author_tag.get_text(" ", strip=True)
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-    <title>{escape(title)}</title><style>{CSS}</style></head><body>
+    <title>{escape(title)}</title><meta name="author" content="{escape(author)}"><style>{CSS}</style></head><body>
     <header class="masthead">
     <p class="kicker">Atilivs Ironworks · Historical research</p>
     <h1>{escape(title)}</h1>
     <p class="subtitle">{escape(subtitle)}</p>
-    <p class="pubdate">Published {escape(date)} · atilivsironworks.com</p>
+    <p class="pubdate">{escape(author)} · Published {escape(date)} · atilivsironworks.com</p>
     </header>
     <article>{str(article.decode_contents())}</article>
     </body></html>"""
