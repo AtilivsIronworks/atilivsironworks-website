@@ -7,7 +7,7 @@ A clean publication metadata bar appears under the H1 and brief description. It 
 ## Structure
 
 - Preserve the article title and subtitle before the metadata bar.
-- Include a hairline divider, followed by the linked author byline **Atilivs Primvs Castvs** (`/about/`).
+- Include a hairline divider, followed by the linked author byline **Corey Peterson** (`/about/`).
 - Display the actual **publication date** using a semantic `<time datetime="YYYY-MM-DD">`. Never substitute the object's completion date.
 - For workshop or project articles that document an older work, include a **separately labelled object-completion date**, if known.
 - Show the compact **PDF** download link only when a PDF actually exists at the linked URL; never show a dead placeholder or invent a DOI.
@@ -21,7 +21,7 @@ A clean publication metadata bar appears under the H1 and brief description. It 
   <div class="publication-meta-items">
     <span class="publication-meta-item">
       <!-- decorative person SVG aria-hidden="true" -->
-      <a href="/about/" rel="author">Atilivs Primvs Castvs</a>
+      <a href="/about/" rel="author">Corey Peterson</a>
     </span>
     <span class="publication-meta-item">
       <!-- decorative calendar SVG aria-hidden="true" -->
