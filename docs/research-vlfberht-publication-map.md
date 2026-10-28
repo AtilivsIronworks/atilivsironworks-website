@@ -1,31 +1,32 @@
-# VLFBERHT research publication map
+# Research publication map — VLFBERHT Swords
 
-Status (2026-10-28): **manuscript webpage drafted, review pending; NOT YET PUBLISHED**.
+**Status:** Published October 28, 2026  
+**Live URL:** https://atilivsironworks.com/research/vlfberht-swords/  
+**GitHub publication PR:** https://github.com/AtilivsIronworks/atilivsironworks-website/pull/1 (merged into `main`)
 
-## Files and routes
-- Research landing page (live): `research/index.html` — https://atilivsironworks.com/research/ ; currently shows "Research paper in preparation".
-- Future canonical article route: `/research/vlfberht-swords/`
-- Draft article page: `research/vlfberht-swords/index.html` on GitHub branch `draft/vlfberht-research-article-2026-10-28` (not yet on `main`).
-- The four historical images are **already uploaded into `research/vlfberht-swords/`**. Draft image paths are relative; no movement is necessary.
-- Existing author-owned River Witham photo reused: `/assets/river-witham/inscription-and-guard.jpg`.
-- File and image credits: `assets/research/vlfberht-swords/README.md` (maintenance manifest, but images themselves are in article folder).
-- The `sitemap.xml` should only include the new article once the publication review is complete.
+## Published routes
 
-## Draft content
-Introduction (latest approved "magical steel" opening), Sections 1–7, conclusion, references, credited Wikimedia figures and author's own River Witham photo, full-page contents navigation, and AI-assisted drafting disclosure. The heading and layout reuse existing site styling and support mobile widths.
+- `research/index.html`: Research archive listing with link to the published study.
+- `research/vlfberht-swords/index.html`: full article, seven sections, conclusion, references and credits.
+- `sitemap.xml`: includes the published URL and the publication date.
+- `research/vlfberht-swords/*.jpg`: six uploaded figure photographs, numbered 01–06.
+- `assets/river-witham/inscription-and-guard.jpg`: seventh image, already present and referenced by absolute path.
+- `assets/research/vlfberht-swords/README.md`: image filename/permission manifest. The actual images are in `research/`, **not** in `assets/research/`.
 
-## Still to review before merging
-1. User review of rendered webpage and final wording.
-2. Optional River Witham process images for the author's experimental experience.
-3. Optional original construction diagram (no third-party copyright issues).
-4. Verify every image path and credit, internal links, and bibliography URLs.
-5. Set **actual publication date** only upon publication.
-6. Update the Research index to a linked article, add the published URL to `sitemap.xml`, and deploy/verify via Cloudflare Pages.
+## Manuscript content
 
-## Research precautions
-- Williams 2009 groups A–D differ from Williams 2012 groups I–V.
-- Stalsberg suggested `+VLFBERHT+` could be somewhat older than `+VLFBERH+T`, which complicates an original/copy sequence.
-- Moilanen discussed carved grooves but did not test that approach in his 13 experiments.
-- The Pohansko sword's cross-section cannot establish chemistry or heat treatment across the entire blade.
-- Similar inscription forms and blade constructions cannot alone demonstrate shared workshops.
-- The author's River Witham reproduction shows practical possibilities but does not prove original Viking Age techniques.
+Introduction (final approved opening with the popular magical-steel reputation and a bladesmith's curiosity); Sections 1–7 on provenance, inscription variants, blade construction, crucible steel, the Pohansko sword, inscription techniques, and the workshop question; conclusion, nine cited works, seven photo captions, and an accurate AI assistance note.
+
+## Historical cautions to preserve
+
+- Williams' 2009 groups A–D differ from his 2012 categories I–V.
+- Stalsberg suggested that `+VLFBERHT+` may be slightly older than `+VLFBERH+T`, which complicates an original/copy sequence.
+- Moilanen discussed cut grooves but did not test that method among his 13 experiments.
+- The Pohansko cross-section does not prove complete-blade metallurgy or a specific heat-treatment sequence.
+- Similar inscription variants and blade constructions cannot, alone, establish shared workshops.
+- The author's River Witham sword demonstrates a practical modern approach, not direct evidence of Viking Age manufacturing.
+- Figure use from academic publications requires rights clearance unless a specific reuse license permits it.
+
+## Future edits
+
+Keep the article title, publication date, canonical link, image paths, sitemap URL and Research archive entry synchronized. If adding an original steel-construction diagram, provide accurate material/technique labels and a caption. Preserve full photographer credits and license links with third-party photographs.
