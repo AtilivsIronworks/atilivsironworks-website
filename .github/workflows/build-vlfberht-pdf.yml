@@ -48,7 +48,7 @@ jobs:
           pdf = PdfReader(str(file))
           pages = len(pdf.pages)
           content = "\n".join(p.extract_text() or "" for p in pdf.pages)
-          required = ["VLFBERHT Swords", "The Pohansko Sword", "Conclusion", "References", "Figure 8."]
+          required = ["VLFBERHT Swords", "The Pohansko Sword", "Conclusion", "References", "Figure 7."]
           missing = [x for x in required if x not in content]
           print(f"Validated PDF: {pages} pages, {file.stat().st_size:,} bytes")
           if pages < 5 or missing:

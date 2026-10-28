@@ -88,8 +88,8 @@ def main() -> None:
             el.decompose()
 
     images = article.select("img")
-    if len(images) != 8:
-        raise SystemExit(f"Expected exactly eight illustrations; found {len(images)}.")
+    if len(images) != 7:
+        raise SystemExit(f"Expected exactly seven locally hosted illustrations; found {len(images)}.")
 
     for img in images:
         raw = img.get("src", "")
@@ -105,7 +105,7 @@ def main() -> None:
         for attr in ("loading", "decoding"):
             img.attrs.pop(attr, None)
 
-    if len(article.select("figcaption")) != 8:
+    if len(article.select("figcaption")) != 7:
         raise SystemExit("Figure caption count does not match image count.")
     if len(article.select("ol.essay-sources > li")) != 9:
         raise SystemExit("Bibliography differs from expected nine entries.")
