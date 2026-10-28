@@ -76,7 +76,7 @@ def main() -> None:
 
     title = heading.get_text(" ", strip=True)
     subtitle_tag = intro.select_one("h1 + p")
-    date_tag = intro.select_one(".article-dates time")
+    date_tag = intro.select_one(".publication-meta-item time")
 
     # A research-paper export includes all approved scholarship, captions, tables,
     # references and editorial note; it omits website navigation/donation controls.
