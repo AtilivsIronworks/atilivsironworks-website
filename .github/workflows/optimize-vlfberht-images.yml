@@ -69,3 +69,8 @@ jobs:
             done
             exit 1
           fi
+
+      - name: Regenerate research PDF after image update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run build-vlfberht-pdf.yml --ref main
