@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/build-vlfberht-pdf.yml"
+      - ".github/workflows/optimize-vlfberht-images.yml"
       - "scripts/build_vlfberht_pdf.py"
       - "research/vlfberht-swords/index.html"
       - "research/vlfberht-swords/*.jpg"
