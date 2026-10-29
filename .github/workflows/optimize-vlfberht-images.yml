@@ -40,7 +40,7 @@ jobs:
           base = Path("research/vlfberht-swords")
           html = (base / "index.html").read_text()
           import re
-          srcs = re.findall(r'<img\\s+src="([^"]+)"', html)
+          srcs = re.findall(r'<img\s+src="([^"]+)"', html)
           figure_count = html.count("<figcaption>")
           for name in ("01-mannheim-ulfberht.jpg", "03-schwedt-inscription.jpg", "04-schwedt-sword.jpg"):
               assert (base / name).is_file(), f"Original missing: {name}"
