@@ -6,7 +6,7 @@
 
 Full title: **VLFBERHT Swords: What Do We Actually Know About How They Were Made?**
 
-The article contains the author's approved introduction, Sections 1–7, conclusion, references, seven illustrated figures and credits, and a research/editorial note describing AI assistance. The paper carefully distinguishes metallurgical evidence from researchers' interpretations and the modern bladesmithing experiment.
+The article contains the author's approved introduction, Sections 1–7, conclusion, references, seven illustrated figures and credits, and a research note distinguishing archaeological evidence from modern work. The paper carefully distinguishes metallurgical evidence from researchers' interpretations and the modern bladesmithing experiment.
 
 The six article photographs and the article's `index.html` belong in **`research/vlfberht-swords/`**. Their image URLs are relative, so they must stay in this directory unless the HTML is updated. The existing author's River Witham image is reused from `/assets/river-witham/inscription-and-guard.jpg`. The Pohansko archaeological drawing is linked to the original paper instead of being hosted here.
 
@@ -16,6 +16,6 @@ For image credits, license details, and exact filenames, see [the image map](../
 
 ## Downloadable PDF
 
-The print-ready complete paper is `research/vlfberht-swords/vlfberht-swords.pdf`, published at https://atilivsironworks.com/research/vlfberht-swords/vlfberht-swords.pdf . The article links to it below the research and editorial note.
+The print-ready complete paper is `research/vlfberht-swords/vlfberht-swords.pdf`, published at https://atilivsironworks.com/research/vlfberht-swords/vlfberht-swords.pdf . The article links to it below the research note.
 
 The PDF is generated from the canonical HTML plus all seven locally hosted figures by `scripts/build_vlfberht_pdf.py`. GitHub Actions (`.github/workflows/build-vlfberht-pdf.yml`) validates and commits the regenerated PDF whenever the article or relevant images change. Do not hand-edit the PDF independently of the HTML.

@@ -15,7 +15,7 @@
 
 ## Manuscript content
 
-Introduction (final approved opening with the popular magical-steel reputation and a bladesmith's curiosity); Sections 1–7 on provenance, inscription variants, blade construction, crucible steel, the Pohansko sword, inscription techniques, and the workshop question; conclusion, nine cited works, seven figure captions, and an accurate AI assistance note.
+Introduction (final approved opening with the popular magical-steel reputation and a bladesmith's curiosity); Sections 1–7 on provenance, inscription variants, blade construction, crucible steel, the Pohansko sword, inscription techniques, and the workshop question; conclusion, nine cited works, seven figure captions, and a research note.
 
 ## Historical cautions to preserve
 
@@ -33,7 +33,7 @@ Keep the article title, publication date, canonical link, image paths, sitemap U
 
 ## PDF export
 
-- `research/vlfberht-swords/vlfberht-swords.pdf`: complete research paper with figures, measurements table, references and editorial note.
+- `research/vlfberht-swords/vlfberht-swords.pdf`: complete research paper with figures, measurements table, references and research note.
 - `scripts/build_vlfberht_pdf.py`: reproducible exporter. The website HTML is authoritative.
 - `.github/workflows/build-vlfberht-pdf.yml`: rebuilds, verifies and commits the downloadable PDF when source HTML or figures change.
 - The bottom of the live article contains the PDF download link, followed by the existing support section.

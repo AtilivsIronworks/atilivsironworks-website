@@ -82,7 +82,7 @@ def main() -> None:
         raise SystemExit("Publication author missing from canonical article")
 
     # A research-paper export includes all approved scholarship, captions, tables,
-    # references and editorial note; it omits website navigation/donation controls.
+    # references and research note; it omits website navigation/donation controls.
     for selector in [".article-support", ".article-download", ".essay-back"]:
         for el in article.select(selector):
             el.decompose()
