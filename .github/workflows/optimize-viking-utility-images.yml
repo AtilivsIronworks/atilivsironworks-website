@@ -1,0 +1,61 @@
+name: Optimize Viking utility knife photographs
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/optimize_viking_utility_images.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: viking-utility-image-optimization
+  cancel-in-progress: false
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Pillow
+        run: python -m pip install --quiet "Pillow>=11,<13"
+      - name: Optimize web copies and references
+        run: python scripts/optimize_viking_utility_images.py
+      - name: Verify originals, optimized images and page links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          root=Path("assets/viking-utility-knife")
+          photos=("IMG_1581","IMG_1582","IMG_1584","IMG_1585","IMG_1586","IMG_1587")
+          for stem in photos:
+              raw=root/(stem+".jpeg")
+              web=root/(stem+"-web.jpg")
+              assert raw.is_file() and web.is_file()
+              assert web.stat().st_size < raw.stat().st_size*.85
+          for path in ("index.html","works/index.html","works/viking-utility-knife/index.html"):
+              page=Path(path).read_text()
+              assert "/assets/viking-utility-knife/IMG_1582-web.jpg" in page
+              assert '/assets/viking-utility-knife/IMG_1582.jpeg' not in page
+          assert Path("works/viking-utility-knife/index.html").read_text().count("-web.jpg") == 7
+          print("All originals retained; optimized photos and references verified.")
+          PY
+      - name: Commit optimized copies
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/viking-utility-knife/*-web.jpg index.html works/index.html works/viking-utility-knife/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Serve optimized Viking utility knife photographs"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
