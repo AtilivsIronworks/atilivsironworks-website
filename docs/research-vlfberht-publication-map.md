@@ -7,15 +7,16 @@
 ## Published routes
 
 - `research/index.html`: Research archive listing with link to the published study.
-- `research/vlfberht-swords/index.html`: full article, seven sections, conclusion, references and seven locally hosted figure credits and an external link to the Pohansko archaeological drawing.
+- `research/vlfberht-swords/index.html`: full article, seven sections, conclusion, references and eight locally hosted figure credits and an external link to the Pohansko archaeological drawing.
 - `sitemap.xml`: includes the published URL and the publication date.
-- `research/vlfberht-swords/*.jpg`: six uploaded article photographs. The unlicensed Pohansko JPG was removed from the current tree.
-- `assets/river-witham/inscription-and-guard.jpg`: seventh locally hosted image, referenced by absolute path.
+- `research/vlfberht-swords/*.jpg`: six uploaded article photographs, including optimized web copies. The earlier unlicensed Pohansko JPG was removed from the current tree.
+- `research/vlfberht-swords/IMG_1499.jpeg`: original illustration by Corey Peterson, 2026, added near the Pohansko discussion.
+- `assets/river-witham/inscription-and-guard.jpg`: eighth locally hosted image, referenced by absolute path.
 - `assets/research/vlfberht-swords/README.md`: image filename/permission manifest. The actual images are in `research/`, **not** in `assets/research/`.
 
 ## Manuscript content
 
-Introduction (final approved opening with the popular magical-steel reputation and a bladesmith's curiosity); Sections 1–7 on provenance, inscription variants, blade construction, crucible steel, the Pohansko sword, inscription techniques, and the workshop question; conclusion, nine cited works, seven figure captions, and a research note.
+Introduction (final approved opening with the popular magical-steel reputation and a bladesmith's curiosity); Sections 1–7 on provenance, inscription variants, blade construction, crucible steel, the Pohansko sword, inscription techniques, and the workshop question; conclusion, nine cited works, eight figure captions, and a research note.
 
 ## Historical cautions to preserve
 
@@ -25,6 +26,7 @@ Introduction (final approved opening with the popular magical-steel reputation a
 - The Pohansko cross-section does not prove complete-blade metallurgy or a specific heat-treatment sequence.
 - Similar inscription variants and blade constructions cannot, alone, establish shared workshops.
 - The author's River Witham sword demonstrates a practical modern approach, not direct evidence of Viking Age manufacturing.
+- The new illustration `IMG_1499.jpeg` is original work by Corey Peterson, 2026, and must not be confused with the archaeological drawing.
 - The Pohansko drawing by N. Koštová, Košta et al. (2019), fig. 21, p. 192, is linked externally at [the original journal PDF](https://pamatkyarcheologicke.cz/archiv/pa_2019_173-235.pdf#page=20), not reproduced. The journal's CC BY-NC-ND 4.0 license does not authorize commercial reuse; separate written permission has not been obtained.
 
 ## Future edits
